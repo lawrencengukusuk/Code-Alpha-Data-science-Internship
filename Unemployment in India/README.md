@@ -450,3 +450,6 @@ For a stronger version of the project:
 ### One-line portfolio summary
 
 > **Quantified the initial COVID-19 labour-market shock in India, finding an 86.9% increase in average unemployment, a 12.7% decline in estimated employment, a 4.56-point fall in labour participation, and substantial regional variation in impact and recovery.**
+##Analyst: Lawrence Ngukusuk
+##contact:+2347081442142
+##August 2026
