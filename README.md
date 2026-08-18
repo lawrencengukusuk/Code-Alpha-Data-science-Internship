@@ -1,6 +1,6 @@
-Absolutely. Since this is the **main README for the CodeAlpha Data Science Internship repository**, it should summarize both projects rather than duplicate the detailed project READMEs.
+Absolutely. Since this is the main README for the CodeAlpha Data Science Internship repository, it should summarize both projects rather than duplicate the detailed project READMEs.
 
-You can use the following as your **root `README.md`**:
+You can use the following as your root `README.md`:
 
 ````markdown
 # CodeAlpha Data Science Internship
