@@ -1,134 +1,384 @@
-# CodeAlpha Data Science Internship — Project Portfolio
+Absolutely. Since this is the **main README for the CodeAlpha Data Science Internship repository**, it should summarize both projects rather than duplicate the detailed project READMEs.
 
-## Overview
+You can use the following as your **root `README.md`**:
 
-This repository contains the projects I completed during my **Data Science Internship at CodeAlpha**.
+````markdown
+# CodeAlpha Data Science Internship
 
-The internship provided an opportunity to apply data science concepts to practical, real-world problems, with a focus on **data analysis, exploratory data analysis, data visualization, and machine learning**.
+## Data Science Projects Portfolio
 
-The projects included in this repository are:
+This repository contains the data science projects completed during my **Data Science Internship at CodeAlpha**.
 
-1. **Unemployment Analysis in India**
-2. **Car Price Prediction Model**
+The projects demonstrate practical experience across two core areas of data science:
 
-Together, these projects demonstrate my ability to work through different stages of the data science workflow — from understanding and preparing datasets to extracting insights and developing predictive models.
+1. **Exploratory Data Analysis** — Unemployment Analysis in India
+2. **Machine Learning & Predictive Modeling** — Car Price Prediction
 
----
-
-## Projects
-
-### 1. Unemployment Analysis in India
-
-An exploratory data analysis project focused on understanding the impact of COVID-19 on unemployment in India.
-
-The analysis examines unemployment trends across Indian regions and compares labour-market conditions before and during the COVID-19 period.
-
-**Key areas covered:**
-
-* Data cleaning and preparation
-* Exploratory data analysis
-* Time-series analysis
-* Unemployment trends
-* Rural vs. urban comparison
-* Regional analysis
-* Employment and labour-force participation
-* Statistical analysis
-* COVID-19 impact assessment
-* Data visualization
-
-**Key finding:**
-The analysis found an **86.9% increase in average unemployment** during the COVID-19 period, alongside a **12.7% decline in estimated employment** and a **4.56 percentage-point decline in labour-force participation**.
-
-📁 **Project folder:** `Project-1-Unemployment-Analysis-India`
+Together, these projects demonstrate my ability to move from raw data and business questions to data cleaning, exploratory analysis, statistical evaluation, machine learning, model assessment, and actionable insights.
 
 ---
 
-### 2. Car Price Prediction Model
+# 📊 Projects Overview
 
-A machine learning project focused on predicting car prices based on available vehicle characteristics.
-
-The project demonstrates the application of a supervised machine learning workflow to a regression problem.
-
-**Key areas covered:**
-
-* Data preprocessing
-* Exploratory data analysis
-* Feature preparation
-* Categorical and numerical data handling
-* Model development
-* Model evaluation
-* Price prediction
-
-📁 **Project folder:** `Project-2-Car-Price-Prediction`
+| # | Project | Type | Primary Focus |
+|---|---|---|---|
+| 1 | 🇮🇳 Unemployment Analysis in India | Data Analysis | COVID-19 impact on India's labour market |
+| 2 | 🚗 Car Price Prediction | Machine Learning | Predicting used-car selling prices |
 
 ---
 
-## Skills Demonstrated
+# 1. 🇮🇳 Unemployment Analysis in India
 
-### Data Analysis
+## Project Overview
 
-* Data Cleaning
-* Exploratory Data Analysis (EDA)
-* Data Transformation
-* Statistical Analysis
-* Trend Analysis
-* Comparative Analysis
+This project analyzes the impact of the COVID-19 pandemic on unemployment in India.
 
-### Data Visualization
+The analysis uses unemployment, estimated employment, and labour-force participation data across Indian regions to compare labour-market conditions before and during the initial COVID-19 period.
 
+The objective was to quantify the magnitude of the shock, identify regional differences, compare rural and urban labour markets, and examine the early recovery following the peak of the disruption.
+
+### Dataset Scope
+
+- **740 valid observations**
+- **28 Indian regions**
+- **May 2019 – June 2020**
+- Monthly observations
+- Rural and urban labour-market data
+- **536 pre-COVID observations**
+- **204 COVID-period observations**
+
+## Key Findings
+
+### 📈 Unemployment increased by 86.9%
+
+Average unemployment increased from:
+
+**9.51% → 17.77%**
+
+This represents:
+
+- **+8.26 percentage points**
+- **+86.9% relative increase**
+
+The monthly unemployment rate reached a peak of:
+
+**24.88% in May 2020**
+
+compared with **9.96% in February 2020**.
+
+---
+
+### 👷 Employment declined by 12.7%
+
+Average estimated employment decreased from approximately:
+
+**7.47 million → 6.52 million**
+
+This represents an estimated reduction of:
+
+**948,825 employed persons (-12.7%)**
+
+---
+
+### 📉 Labour-force participation declined
+
+Average labour-force participation decreased from:
+
+**43.89% → 39.33%**
+
+representing a:
+
+**4.56 percentage-point decline**
+
+---
+
+### 🏙️ Rural vs Urban
+
+The analysis found different patterns across rural and urban labour markets.
+
+**Rural unemployment**
+
+- Pre-COVID: **8.09%**
+- COVID: **16.18%**
+- Increase: **8.09 percentage points**
+- Relative increase: **99.9%**
+
+**Urban unemployment**
+
+- Pre-COVID: **10.84%**
+- COVID: **19.28%**
+- Increase: **8.43 percentage points**
+- Relative increase: **77.8%**
+
+Although urban unemployment was higher in absolute terms, rural unemployment almost doubled relative to its baseline.
+
+---
+
+### 🗺️ Regional Impact
+
+The COVID-period increase in unemployment varied substantially across regions.
+
+The largest increases included:
+
+| Region | Increase |
+|---|---:|
+| Puducherry | **+37.36 pp** |
+| Tamil Nadu | **+22.57 pp** |
+| Jharkhand | **+22.07 pp** |
+| Bihar | **+17.80 pp** |
+| Karnataka | **+12.05 pp** |
+
+Puducherry recorded the largest observed increase, with unemployment rising from **1.59% to 38.96%**.
+
+---
+
+### 🔄 Early Recovery
+
+Monthly unemployment changed as follows:
+
+| Month | Unemployment |
+|---|---:|
+| February 2020 | 9.96% |
+| March 2020 | 10.70% |
+| April 2020 | 23.64% |
+| May 2020 | **24.88%** |
+| June 2020 | 11.90% |
+
+From the May peak to June, unemployment declined by:
+
+**12.98 percentage points**
+
+or approximately **52.2% relative to the May peak**.
+
+---
+
+### 📐 Statistical Analysis
+
+A Welch two-sample t-test produced:
+
+- **t-statistic:** -7.52
+- **p-value:** 1.10 × 10⁻¹²
+
+This provides strong statistical evidence of a difference between the pre-COVID and COVID-period unemployment observations under the test specification.
+
+> **Note:** This is evidence of a period difference, not proof of causality. The data contain repeated regional and time observations, so a panel-based model would provide stronger causal inference.
+
+### Technologies
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- SciPy
+- Jupyter Notebook
+
+### [View Unemployment Analysis →](./Project-1-Unemployment-Analysis-India/)
+
+---
+
+# 2. 🚗 Car Price Prediction
+
+## Project Overview
+
+This project develops a machine learning regression model to predict used-car selling prices based on vehicle characteristics.
+
+The project demonstrates an end-to-end supervised machine learning workflow, including data cleaning, exploratory analysis, feature engineering, model comparison, cross-validation, hyperparameter optimization, and model evaluation.
+
+### Dataset Scope
+
+After data cleaning:
+
+- **299 observations**
+- **9 variables**
+- **2 duplicate records removed**
+
+### Features
+
+The model uses vehicle characteristics including:
+
+- Present price
+- Driven kilometres
+- Fuel type
+- Selling type
+- Transmission
+- Previous owners
+- Car age
+
+A new **car age** feature was engineered from the vehicle year.
+
+---
+
+## 🤖 Models Evaluated
+
+Four regression algorithms were compared:
+
+1. Linear Regression
+2. Decision Tree Regressor
+3. Random Forest Regressor
+4. Gradient Boosting Regressor
+
+---
+
+## 📊 Model Performance
+
+The initial test-set evaluation produced:
+
+| Model | MAE | RMSE | R² |
+|---|---:|---:|---:|
+| Linear Regression | 1.473 | 2.525 | 0.753 |
+| Decision Tree | 1.451 | 3.110 | 0.625 |
+| Random Forest | 1.532 | 3.695 | 0.470 |
+| **Gradient Boosting** | **1.125** | **2.515** | **0.755** |
+
+### 🏆 Best Initial Model
+
+**Gradient Boosting Regressor**
+
+Performance:
+
+- **MAE:** 1.125
+- **RMSE:** 2.515
+- **R²:** 0.755
+
+The model explained approximately **75.5% of the variation** in the held-out test data.
+
+---
+
+## 🔄 Cross-Validation
+
+Five-fold cross-validation was used to assess model stability.
+
+| Model | Mean CV RMSE |
+|---|---:|
+| **Gradient Boosting** | **1.431** |
+| Random Forest | 1.668 |
+| Linear Regression | 1.871 |
+| Decision Tree | 1.894 |
+
+Gradient Boosting produced the lowest mean cross-validation RMSE among the evaluated models.
+
+---
+
+## ⚙️ Hyperparameter Optimization
+
+`RandomizedSearchCV` was used to optimize the Gradient Boosting model.
+
+The search evaluated:
+
+- **30 parameter combinations**
+- **5-fold cross-validation**
+
+The optimized model achieved a best cross-validation RMSE of approximately:
+
+**1.217**
+
+The final tuned model achieved:
+
+- **MAE:** 1.191
+- **RMSE:** 2.614
+- **R²:** 0.735
+
+An important modelling observation is that the tuned model's cross-validation performance improved, while its single held-out test performance was slightly weaker than the initial Gradient Boosting model.
+
+---
+
+## 🔎 Feature Importance
+
+Feature importance analysis showed that:
+
+**Present Price and Car Age accounted for approximately 97% of total feature importance.**
+
+This indicates that these two variables dominated the predictive decisions of the fitted model.
+
+---
+
+## 🧠 Machine Learning Workflow
+
+```text
+Raw Dataset
+     ↓
+Data Quality Checks
+     ↓
+Duplicate Removal
+     ↓
+Data Cleaning
+     ↓
+Exploratory Data Analysis
+     ↓
+Feature Engineering
+     ↓
+Train/Test Split
+     ↓
+Categorical Encoding
+     ↓
+Model Training
+     ↓
+Cross-Validation
+     ↓
+Hyperparameter Optimization
+     ↓
+Model Evaluation
+     ↓
+Feature Importance
+     ↓
+Prediction
+````
+
+### Technologies
+
+* Python
+* Pandas
+* NumPy
 * Matplotlib
 * Seaborn
-* Trend visualization
-* Distribution analysis
-* Comparative visualizations
+* Scikit-learn
+* Joblib
+* Jupyter Notebook
 
-### Machine Learning
+### [View Car Price Prediction →](./Project-2-Car-Price-Prediction/)
+
+---
+
+# 🛠️ Technical Skills Demonstrated
+
+## Data Analysis
+
+* Data Cleaning
+* Data Quality Validation
+* Exploratory Data Analysis
+* Statistical Analysis
+* Time-Series Analysis
+* Regional Segmentation
+* Rural vs Urban Analysis
+* Data Visualization
+
+## Machine Learning
 
 * Regression
 * Feature Engineering
-* Model Training
+* Categorical Encoding
+* Model Comparison
+* Cross-Validation
+* Hyperparameter Optimization
 * Model Evaluation
-* Predictive Analysis
+* Feature Importance
+* Residual Analysis
 
-### Tools & Technologies
+## Python Ecosystem
 
-* **Python**
-* **Pandas**
-* **NumPy**
-* **Matplotlib**
-* **Seaborn**
-* **Scikit-learn**
-* **Jupyter Notebook**
-
----
-
-## Data Science Workflow
-
-The projects followed a structured analytical workflow:
-
-```text
-Problem Definition
-       ↓
-Data Collection
-       ↓
-Data Cleaning
-       ↓
-Exploratory Data Analysis
-       ↓
-Feature Preparation
-       ↓
-Visualization
-       ↓
-Statistical / Machine Learning Analysis
-       ↓
-Model Evaluation / Insight Generation
-       ↓
-Business Interpretation
-```
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* SciPy
+* Scikit-learn
+* Joblib
+* Jupyter Notebook
 
 ---
 
-## Repository Structure
+# 📁 Repository Structure
 
 ```text
 CodeAlpha-Data-Science-Internship/
@@ -137,8 +387,8 @@ CodeAlpha-Data-Science-Internship/
 │
 ├── Project-1-Unemployment-Analysis-India/
 │   ├── README.md
-│   ├── Untitled-1.ipynb
 │   ├── EXECUTIVE_SUMMARY.md
+│   ├── unemployment_analysis.ipynb
 │   ├── data/
 │   └── images/
 │
@@ -151,29 +401,106 @@ CodeAlpha-Data-Science-Internship/
 
 ---
 
-## Internship Experience
+# 🎓 Internship Learning Outcomes
 
-The **CodeAlpha Data Science Internship** provided practical experience in applying data science techniques to real-world datasets.
+Through these projects, I gained practical experience in applying data science techniques to real-world problems.
 
-Through these projects, I strengthened my understanding of:
+The internship strengthened my ability to:
 
-* Translating business questions into analytical problems
-* Preparing and validating datasets
-* Identifying meaningful patterns in data
-* Communicating analytical findings
-* Applying machine learning to prediction problems
-* Documenting data science projects professionally
+* Translate real-world questions into data problems
+* Clean and validate datasets
+* Explore and visualize data
+* Identify meaningful trends and patterns
+* Quantify business and economic impacts
+* Build and compare machine learning models
+* Evaluate model performance using appropriate metrics
+* Apply cross-validation and hyperparameter tuning
+* Interpret model outputs
+* Communicate technical findings in a business-friendly manner
+
+---
+
+# 📌 Key Portfolio Highlights
+
+### 🇮🇳 Unemployment Analysis
+
+> **Analyzed 740 observations across 28 Indian regions and quantified an 86.9% increase in average unemployment, a 12.7% decline in estimated employment, and a 4.56 percentage-point decline in labour-force participation during the initial COVID-19 shock.**
+
+### 🚗 Car Price Prediction
+
+> **Built and evaluated four regression models on 299 cleaned vehicle records, with Gradient Boosting achieving an initial test R² of 0.755 and RMSE of 2.515; five-fold cross-validation and hyperparameter optimization were used to assess model robustness.**
 
 ---
 
-## Conclusion
+# ⚠️ Project Limitations
 
-These projects represent my practical application of **data analysis and machine learning** during my CodeAlpha Data Science Internship.
+Both projects are portfolio-oriented analytical projects and have limitations.
 
-The repository demonstrates not only technical implementation in Python, but also the ability to communicate results, quantify findings, and approach data-driven problems systematically.
+### Unemployment Analysis
+
+The unemployment analysis covers the initial COVID-19 shock and early recovery through **June 2020**. It does not represent the complete pandemic period and does not establish causal effects.
+
+### Car Price Prediction
+
+The car-price dataset contains only **299 observations after cleaning**, which limits generalization. Model performance may also vary with different train/test splits and with vehicles outside the dataset's original distribution.
 
 ---
+
+# 🚀 Future Improvements
+
+Potential future extensions include:
+
+### Unemployment Analysis
+
+* Extend the dataset beyond June 2020
+* Build fixed-effects panel regression
+* Investigate sector-specific employment impacts
+* Compare lockdown intensity across regions
+* Develop an interactive Power BI/Tableau dashboard
+
+### Car Price Prediction
+
+* Increase dataset size
+* Perform additional feature engineering
+* Test additional regression algorithms
+* Use repeated cross-validation
+* Investigate outliers
+* Build a Streamlit prediction application
+* Deploy the model through an API
+
+---
+
+# 👨‍💻 About
+
+This repository represents my practical work completed during my **Data Science Internship at CodeAlpha**.
+
+The projects demonstrate my development across both **descriptive analytics and predictive machine learning**, from extracting insights from real-world data to developing and evaluating regression models.
 
 **Internship:** CodeAlpha — Data Science Internship
 **Projects:** Unemployment Analysis in India | Car Price Prediction
 **Primary Language:** Python
+
+````
+
+### Recommended GitHub structure
+
+Your repository should now look like:
+
+```text
+📁 CodeAlpha-Data-Science-Internship
+│
+├── 📄 README.md                         ← THIS combined README
+│
+├── 📁 Project-1-Unemployment-Analysis-India
+│   ├── 📄 README.md                     ← Detailed project README
+│   ├── 📄 EXECUTIVE_SUMMARY.md
+│   ├── 📓 unemployment_analysis.ipynb
+│   └── 📁 data
+│
+└── 📁 Project-2-Car-Price-Prediction
+    ├── 📄 README.md                     ← Detailed project README
+    ├── 📓 car_price_prediction.ipynb
+    └── 📁 data
+````
+
+This gives you **three levels of documentation**: the root README sells the overall internship portfolio, while each project's README provides the technical detail.
